@@ -1,0 +1,119 @@
+upgrade_name: Pectra
+upgrade_network: Mainnet
+activation_unix_epoch: 1746612311
+# activation_unix_epoch: 0 # for testing to show poap section
+activation_epoch: 364,032
+activation_slot: 11,649,024
+
+
+background_img: /assets/img/backgrounds/pectra.png #optional, shows as timer card bg
+
+
+livestream_start: 50 minutes prior to activation
+livestream_link: https://www.youtube.com/embed/NbxaCZYtW-I
+
+
+upgrade_announcement: https://blog.ethereum.org/2025/04/23/pectra-mainnet #optional
+ethpandaops_checklist: https://ethpandaops.io/posts/pectra-mainnet-checklist/ #optional
+resources: # separating by sections is optional
+  # - title: 
+  #   link: 
+  # - section: 
+  #   section_items:
+  #     - title: 
+  #       link: 
+
+  - title: The Lab (Live Slots)
+    link: https://lab.ethpandaops.io/beacon/slot/live
+  - title: Beaconcha.in
+    link: https://beaconcha.in/
+  - title: EthSeer
+    link: https://ethseer.io/?network=mainnet
+  - title: The Lab (Locally Built Blocks)
+    link: https://lab.ethpandaops.io/beacon/locally-built-blocks
+  - title: ethPandaOps Twitter (Post-Update Testing Results)
+    link: https://x.com/ethpandaops/
+  - title: Pectrified.com
+    link: https://www.pectrified.com/
+  - title: Consolidation Rates by Entity
+    link: https://www.pectra.info/consolidation#:~:text=Consolidation%20Rates%20by%20Entity
+
+
+meta_eip: 7600
+eips: # separating by sections is optional
+  # - number: 
+  #   description: 
+  # - section: 
+  #   section_items:
+  #     - number: 
+  #       description: 
+  - section: From EOAs to Smart Accounts
+    section_items:
+      - number: 7702
+        description: Set EOA account code → account abstraction for EOAs
+  - section: Validator UX Improvements
+    section_items:
+      - number: 6110
+        description: Supply validator deposits on chain → better syncing & efficiency
+      - number: 7002
+        description: Validators can exit via smart contracts → flexible exits
+      - number: 7251
+        description: Raises validator max balance from 32 ETH → automatic compounding
+      - number: 7549
+        description: Move committee index outside attestation
+  - section: Blob Scaling
+    section_items:
+      - number: 7623
+        description: Increase calldata cost → improves scalability
+      - number: 7691
+        description: Blob throughput increase → increased L2 scaling
+      - number: 7840
+        description: Add blob schedule to EL config files → improves data portability
+  - section: Cryptography & Infra
+    section_items:
+      - number: 2537
+        description: BLS signature support for staking → improves cryptography
+      - number: 2935
+        description: Adds access to historical block hashes → helps L2s/oracles
+      - number: 7685
+        description: EL triggered requests of CL → safer infrastructure
+
+
+poap: true
+poap_address: poap.ethstaker.eth
+poap_deadline: May 14, 11:59 PM EDT
+poap_payment_networks:
+  - Arbitrum
+  - Base
+  - Optimism
+  - Ethereum Mainnet
+poap_minted_network: Arbitrum One
+poap_options:
+  - cost: 0.005 ETH for 2 POAPs
+    airship_link: # optional
+    poaps:
+      - img: /assets/img/poaps/pectra-mainnet.webp
+        link: https://poap.gallery/drops/189671
+        title: Official Pectra Upgrade POAP
+      - img: /assets/img/poaps/pectra-mainnet-community.gif
+        link: https://poap.gallery/drops/189670
+        title: Pectra Upgrade POAP, Community Edition
+  - cost: 0.05 ETH for 3 POAPs
+    airship_link: # optional
+    poaps:
+      - img: /assets/img/poaps/pectra-mainnet.webp
+        link: https://poap.gallery/drops/189671
+        title: Official Pectra Upgrade POAP
+      - img: /assets/img/poaps/pectra-mainnet-community.gif
+        link: https://poap.gallery/drops/189670
+        title: Pectra Upgrade POAP, Community Edition
+      - img: /assets/img/poaps/pectra-mainnet-premium.gif
+        link: https://poap.gallery/drops/189672
+        title: Official Pectra Upgrade POAP, Protocol Supporter Edition
+poap_sponsor: true
+poap_sponsor_text: POAP mint powered by Arbitrum One
+poap_sponsor_img: /assets/img/sponsors/arbitrum.png
+poap_sponsor_link: https://arbitrum.io/
+
+
+

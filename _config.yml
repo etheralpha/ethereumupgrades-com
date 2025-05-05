@@ -1,0 +1,24 @@
+# Read about configuration here: https://jekyllrb.com/docs/configuration/options/
+title: Ethereum Upgrades
+description: Resources to follow Ethereum's upgrades.
+keywords: ethereum, upgrade, stream, eips, eth, hardfork, fork
+url: https://ethereumupgrades.com
+permalink: pretty # Do not change this, it will break all links
+timezone: America/New_York
+markdown: kramdown
+port: 4400
+livereload: true
+
+# Plugins
+plugins:
+  - jekyll-redirect-from # https://github.com/jekyll/jekyll-redirect-from
+redirect_from: # jekyll-redirect-from
+  json: false
+
+
+# Upgrade Info
+upgrade_name: Pectra
+upgrade_network: Mainnet
+upgrade_data_file: pectra-mainnet
+
+
