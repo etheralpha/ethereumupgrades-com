@@ -163,6 +163,8 @@ a:hover {
   color: var(--accent-text);
   display: inline-block;
   margin-bottom: 15px;
+  width: 245px;
+  max-width: 85% !important;
 }
 #timer.activated {
   color: #2aa545;
@@ -323,5 +325,8 @@ a:hover {
 
 .github {
   opacity: 85%;
+}
+.github path {
+  fill: var(--text);
 }
 

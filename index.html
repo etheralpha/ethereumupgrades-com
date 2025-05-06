@@ -32,7 +32,7 @@ layout: default
     <span id="local-time"></span>
   </p>
   <p>
-    <strong>Activation Block:</strong>
+    <strong>Activation Epoch:</strong>
     <a href="https://beaconcha.in/epoch/{{data.activation_epoch | remove: ','}}" target="_blank">{{data.activation_epoch}}</a>
   </p>
   <p>
@@ -132,7 +132,7 @@ layout: default
       <img class="poap-text" src="/assets/img/poap.png">
     </h2>
     <div class="poap-directions">
-      <p>To claim the {{data.upgrade_name}} {{data.upgrade_network}} Upgrade POAP, <strong>send end at least the listed amount to <a href="https://etherscan.io/address/{{data.poap_address}}" target="_blank">{{data.poap_address}}</a></strong> before {{data.poap_deadline}}</p>
+      <p>To mint the {{data.upgrade_name}} {{data.upgrade_network}} Upgrade POAP, <strong>send at least the listed amount to <a href="https://etherscan.io/address/{{data.poap_address}}" target="_blank">{{data.poap_address}}</a></strong> before {{data.poap_deadline}}</p>
       <ul>
         {%- assign minted_on = "" -%}
         {%- if data.poap_minted_network -%}

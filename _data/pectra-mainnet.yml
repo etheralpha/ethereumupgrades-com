@@ -79,9 +79,10 @@ eips: # separating by sections is optional
         description: EL triggered requests of CL → safer infrastructure
 
 
-poap: true
+# poap section is hidden until 60min before activation
+poap: true # true = show poap section, false = hide
 poap_address: poap.ethstaker.eth
-poap_deadline: May 14, 11:59 PM EDT
+poap_deadline: May 10, 11:59 PM EST
 poap_payment_networks:
   - Arbitrum
   - Base
@@ -90,27 +91,27 @@ poap_payment_networks:
 poap_minted_network: Arbitrum One
 poap_options:
   - cost: 0.005 ETH for 2 POAPs
-    airship_link: # optional
+    airship_link: https://airship.poap.xyz/pectra-mainnet-upgrade # optional
     poaps:
-      - img: /assets/img/poaps/pectra-mainnet.webp
+      - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet.webp
         link: https://poap.gallery/drops/189671
         title: Official Pectra Upgrade POAP
-      - img: /assets/img/poaps/pectra-mainnet-community.gif
+      - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet-community.gif
         link: https://poap.gallery/drops/189670
         title: Pectra Upgrade POAP, Community Edition
   - cost: 0.05 ETH for 3 POAPs
-    airship_link: # optional
+    airship_link: https://airship.poap.xyz/pectra-mainnet-supporter-edition # optional
     poaps:
-      - img: /assets/img/poaps/pectra-mainnet.webp
+      - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet.webp
         link: https://poap.gallery/drops/189671
         title: Official Pectra Upgrade POAP
-      - img: /assets/img/poaps/pectra-mainnet-community.gif
+      - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet-community.gif
         link: https://poap.gallery/drops/189670
         title: Pectra Upgrade POAP, Community Edition
-      - img: /assets/img/poaps/pectra-mainnet-premium.gif
+      - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet-premium.gif
         link: https://poap.gallery/drops/189672
         title: Official Pectra Upgrade POAP, Protocol Supporter Edition
-poap_sponsor: true
+poap_sponsor: true # true = show sponsor section, false = hide
 poap_sponsor_text: POAP mint powered by Arbitrum One
 poap_sponsor_img: /assets/img/sponsors/arbitrum.png
 poap_sponsor_link: https://arbitrum.io/
