@@ -250,7 +250,7 @@ a:hover {
 }
 .poap-img {
   width: 130px;
-  height: 130px;
+  /*height: 130px;*/
   object-fit: cover;
   border-radius: 50%;
   /*box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);*/
@@ -263,6 +263,13 @@ a:hover {
 .poap-img-wrapper a:not(:first-child),
 .poap-img:not(:first-child) {
   margin-left: -80px;
+}
+@media screen and (max-width: 500px) {
+  .poap-img-wrapper a:not(:first-child),
+  .poap-img:not(:first-child) {
+    margin-left: 0px;
+    display: block;
+  }
 }
 .poap-img:hover {
   position: relative;
