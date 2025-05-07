@@ -22,15 +22,16 @@ resources: # separating by sections is optional
   #   section_items:
   #     - title: 
   #       link: 
-
   - title: The Lab (Live Slots)
     link: https://lab.ethpandaops.io/beacon/slot/live
+  - title: The Lab (Live Blocks)
+    link: https://lab.ethpandaops.io/beacon/block-production/live
+  - title: The Lab (Locally Built Blocks)
+    link: https://lab.ethpandaops.io/beacon/locally-built-blocks
   - title: Beaconcha.in
     link: https://beaconcha.in/
   - title: EthSeer
     link: https://ethseer.io/?network=mainnet
-  - title: The Lab (Locally Built Blocks)
-    link: https://lab.ethpandaops.io/beacon/locally-built-blocks
   - title: ethPandaOps Twitter (Post-Update Testing Results)
     link: https://x.com/ethpandaops/
   - title: Pectrified.com
