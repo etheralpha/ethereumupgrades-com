@@ -1,0 +1,14 @@
+<p id="selectWrapper">
+  <select id="upgradeSelect" class="form-select d-block" aria-label="Default select example">
+    <option selected disabled>Select upgrade</option>
+    {%- for file in site.data -%}
+      <option value="/{{file[0]}}">{{file[1].upgrade_name}} ({{file[1].upgrade_network}})</option>
+    {%- endfor -%}
+  </select>
+<p>
+
+<script type="text/javascript">
+  document.getElementById('upgradeSelect').addEventListener('change', function (e) {
+    window.location.assign('/upgrades' + e.target.value);
+  });
+</script>

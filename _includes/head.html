@@ -5,7 +5,7 @@
 
 {%- assign title = site.title -%}
 {%- if page.title -%}
-  {%- capture page_title -%}{{ page.title }} | {{ title }}{%- endcapture -%}
+  {%- capture page_title -%}{{ page.title }}{%- endcapture -%}
   {%- assign title = page_title -%}
 {%- endif -%}
 
@@ -70,5 +70,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/assets/css/style.css"> -->
+  <style type="text/css">
+    {% include style.css  upgrade_data_file=page.upgrade_data_file %}
+  </style>
 </head>

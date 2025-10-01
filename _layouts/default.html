@@ -3,9 +3,13 @@
 {%- include head.html -%}
 <body>
   <main>
-    {{content}}
+    {%- include upgrade-select.html -%}
+    {%- include content.html -%}
     {%- include footer.html -%}
   </main>
-  <script src="/assets/js/script.js"></script>
+  <!-- <script src="/assets/js/main.js"></script> -->
+  <script type="text/javascript">
+    {%- include main.js -%}
+  </script>
 </body>
 </html>

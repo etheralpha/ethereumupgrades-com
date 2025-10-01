@@ -1,0 +1,216 @@
+{%- assign upgrade_data_file = page.upgrade_data_file -%}
+
+{%- assign data = site.data[upgrade_data_file] -%}
+{%- assign network = data.upgrade_network | downcase -%}
+{%- assign explorer_subdomain = "www" -%}
+{%- if network == "holesky" -%}
+  {%- assign explorer_subdomain = "light-holesky" -%}
+{%- elsif network == "hoodi" -%}
+  {%- assign explorer_subdomain = "hoodi" -%}
+{%- elsif network == "sepolia" -%}
+  {%- assign explorer_subdomain = "light-sepolia" -%}
+{%- endif -%}
+{%- assign tbd = data.activation_epoch | downcase -%}
+{%- if tbd != "tbd" -%}
+  {%- assign tbd = "" -%}
+{%- endif -%}
+{%- assign activation_slot = data.activation_epoch | remove: ',' | times: 32 -%}
+
+
+<style type="text/css">
+  {{data.css}}
+</style>
+
+<header>
+  <h1>{{data.upgrade_name}} {{data.upgrade_network}} Upgrade</h1>
+  <p class="subtitle">Resources to follow Ethereum's upgrades</p>
+  <nav>
+    <a href="#countdown">Countdown</a>
+    {%- if data.livestream_link -%}
+      <a href="#video">Livestream</a>
+    {%- endif -%}
+    <a href="#resources">Resources</a>
+    <a href="#eips">EIPs</a>
+    {%- if data.poap -%}
+      <a href="#poap">POAP</a>
+    {%- endif -%}
+  </nav>
+</header>
+
+
+
+{%- if tbd == "tbd" -%}
+  <section id="countdown" class="card background">
+    <h2>Activation Countdown</h2>
+    <p><strong>Local Activation Time:</strong> TBD</p>
+    <p><strong>Activation Epoch:</strong> TBD</p>
+    <p><strong>Activation Slot:</strong> TBD</p>
+  </section>
+{%- else -%}
+  <section id="countdown" class="card background">
+    <h2>Activation Countdown</h2>
+    <div id="timer" class="countdown-box">Loading...</div>
+    <p>
+      <strong>Local Activation Time:</strong>
+      <span id="local-time"></span>
+    </p>
+    <p>
+      <strong>Activation Epoch:</strong>
+      <a href="https://{{explorer_subdomain}}.beaconcha.in/epoch/{{data.activation_epoch | remove: ','}}" target="_blank">{{data.activation_epoch}}</a>
+    </p>
+    <p>
+      <strong>Activation Slot:</strong>
+      <a href="https://{{explorer_subdomain}}.beaconcha.in/slot/{{activation_slot}}" target="_blank">{{activation_slot}}</a>
+    </p>
+  </section>
+{%- endif -%}
+
+
+
+{%- if data.livestream_link -%}
+  <section id="video" class="card">
+    <h2>Livestream</h2>
+    <p>Starts {{data.livestream_start}}</p>
+    <div class="video-container">
+      <iframe src="{{data.livestream_link}}" title="{{data.upgrade_name}} {{data.upgrade_network}} Upgrade Video" allowfullscreen></iframe>
+    </div>
+  </section>
+{%- endif -%}
+
+
+
+
+<section id="resources" class="card">
+  <h2>Resources</h2>
+  <p class="eip-meta">
+    {%- if data.upgrade_announcement -%}
+      <a href="{{data.upgrade_announcement}}" target="_blank">Upgrade Announcement</a>
+    {%- endif -%}
+    {%- if data.upgrade_announcement and data.ethpandaops_checklist -%}
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+    {%- endif -%}
+    {%- if data.ethpandaops_checklist -%}
+      <a href="{{data.upgrade_announcement}}#monitoring-resources" target="_blank">ethPandaOps Monitoring Checklist</a>
+    {%- endif -%}
+  </p>
+  {%- for item in data.resources -%}
+    <ul>
+      {%- if item.section -%}
+        <li class="bullet-group">
+          <span class="bullet-group-title">{{item.section}}</span>
+          <ul>
+            {%- for resource in item.section_items -%}
+              <li><a href="{{resource.link}}" target="_blank">{{resource.title}}</a></li>
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- else -%}
+        <li><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
+      {%- endif -%}
+    </ul>
+  {%- endfor -%}
+</section>
+
+
+
+
+<section id="eips" class="card">
+  <h2>EIPs in {{data.upgrade_name}}</h2>
+  <p class="eip-meta">
+    <a href="https://forkcast.org/upgrade/{{data.upgrade_name | downcase}}" target="_blank">Forkcast</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://eips.ethereum.org/EIPS/eip-{{data.meta_eip}}" target="_blank">{{data.upgrade_name}} Meta EIP</a>
+    {%- if data.upgrade_announcement -%}
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="{{data.upgrade_announcement}}" target="_blank">Upgrade Announcement</a>
+    {%- endif -%}
+  </p>
+  {%- for item in data.eips -%}
+    <ul>
+      {%- if item.section -%}
+        <li class="bullet-group">
+          <span class="bullet-group-title">{{item.section}}</span>
+          <ul>
+            {%- for eip in item.section_items -%}
+              <li>
+                <a href="https://eips.ethereum.org/EIPS/eip-{{eip.number}}" target="_blank"><strong>EIP-{{eip.number}}</strong></a>:
+                {{eip.description}}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- else -%}
+        <li>
+          <a href="https://eips.ethereum.org/EIPS/eip-{{item.number}}" target="_blank"><strong>EIP-{{item.number}}</strong></a>:
+          {{item.description}}
+        </li>
+      {%- endif -%}
+    </ul>
+  {%- endfor -%}
+</section>
+
+
+
+
+{%- if data.poap -%}
+  <section id="poap" class="card">
+    <h2 class="poap-title">
+      <img class="poap-logo" src="/assets/img/poap-logo.webp">
+      <img class="poap-text" src="/assets/img/poap.png">
+    </h2>
+    <div class="poap-directions">
+      <p>To mint the {{data.upgrade_name}} {{data.upgrade_network}} Upgrade POAP, <strong>send at least the listed amount to <a href="https://etherscan.io/address/{{data.poap_address}}" target="_blank">{{data.poap_address}}</a></strong> before {{data.poap_deadline}}</p>
+      <ul>
+        {%- assign minted_on = "" -%}
+        {%- if data.poap_minted_network -%}
+          {%- assign minted_on = "on " | append: data.poap_minted_network -%}
+        {%- endif -%}
+        <li>Payment supported on {{data.poap_payment_networks | join: ", "}}</li>
+        <li>The POAP will be automatically minted {{minted_on}} to the sending address within a few minutes</li>
+        <li>No wallet connection required</li>
+        {%- if data.poap_address contains "ethstaker.eth" -%}
+          <li>EthStaker is grant-funded and all funds go towards supporting staking initiatives</li>
+        {%- endif -%}
+      </ul>
+    </div>
+    <div class="poap-options">
+      {%- for sale in data.poap_options -%}
+        <div class="card">
+          <div class="poap-img-wrapper">
+            {%- for poap in sale.poaps -%}
+              {%- if poap.link -%}
+                <a href="{{poap.link}}" target="_blank">
+                  <img src="{{poap.img}}" alt="{{poap.title}}" title="{{poap.title}}" class="poap-img"/>
+                </a>
+              {%- else -%}
+                <img src="{{poap.img}}" alt="{{poap.title}}" title="{{poap.title}}" class="poap-img"/>
+              {%- endif -%}
+            {%- endfor -%}
+            <div class="poap-cost">
+              {{sale.cost}}
+            </div>
+          </div>
+          {%- if sale.airship_link -%}
+            <p class="poap-details">
+              <a href="{{sale.airship_link}}" target="_blank">POAP Airship</a>
+            </p>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if data.poap_sponsor -%}
+      <div class="poap-sponsor">
+        <strong>{{data.poap_sponsor_text}}</strong><br>
+        <a href="{{data.poap_sponsor_link}}" target="_blank">
+          <img class="poap-sponsor-img" src="{{data.poap_sponsor_img}}">
+        </a>
+      </div>
+    {%- endif -%}
+  </section>
+{%- endif -%}
+
+
+<!-- <div class="background">
+</div> -->
+

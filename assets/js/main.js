@@ -1,6 +1,26 @@
 ---
 ---
 
+
+
+
+
+
+
+
+// THIS FILE IS NO LONGER USED
+
+// NOW USING _includes/main.js
+
+
+
+
+
+
+
+
+
+
 {%- assign upgrade_data_file = site.upgrade_data_file -%}
 {%- assign data = site.data[upgrade_data_file] -%}
 
@@ -12,8 +32,13 @@ const localTime = document.getElementById("local-time");
 
 // show poap section if activation time passed
 if (activationTime < epochTime) {
-  document.getElementById("poap").style.display = "block";
+  try {
+    document.getElementById("poap").style.display = "block";
+  } catch {
+    // required to prevent error if poap section disable
+  }
 }
+
 
 const formatTime = (t) => {
   const days = Math.floor(t / (1000 * 60 * 60 * 24));

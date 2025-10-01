@@ -1,0 +1,143 @@
+upgrade_name: Fusaka
+upgrade_network: Holesky
+activation_unix_epoch: 1759308480
+# activation_unix_epoch: 0 # for testing to show poap section
+activation_epoch: 165120 # from meta eip
+
+
+background_img: /assets/img/backgrounds/fusaka.png # optional, shows as timer card bg
+css: |
+  --bg: rgba(252, 252, 252, 100);
+  --img-transparency: 93%;
+  --card: #ffffff;
+  --text: #000;
+  --accent-text: #888;
+  --accent-bg: #efefef;
+  --accent-border: #000;
+  --accent-text-hover: #666;
+  --accent-bg-hover: #e2e2e2;
+# css: |
+#   --bg: rgba(255, 254, 246, 100);
+#   --img-transparency: 93%;
+#   --card: #ffffff;
+#   --text: #966103;
+#   --accent-text: #b8810c;
+#   --accent-bg: #f8f0d3;
+#   --accent-border: #b8810c;
+#   --accent-text-hover: #dcae0e;
+#   --accent-bg-hover: #f6e8b4;
+
+
+# optional
+# livestream_start: 50 minutes prior to activation
+# livestream_link: 
+
+
+upgrade_announcement: https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement #optional
+# ethpandaops_checklist: https://ethpandaops.io/posts/fusaka-mainnet-checklist/ #optional
+resources: # separating by sections is optional
+  # - title: 
+  #   link: 
+  # - section: 
+  #   section_items:
+  #     - title: 
+  #       link: 
+  - title: The Lab (Live Slots)
+    link: https://lab.ethpandaops.io/beacon/slot/live
+  - title: The Lab (Live Blocks)
+    link: https://lab.ethpandaops.io/beacon/block-production/live
+  - title: The Lab (Locally Built Blocks)
+    link: https://lab.ethpandaops.io/beacon/locally-built-blocks
+  - title: Beaconcha.in
+    link: https://light-holesky.beaconcha.in/
+  # - title: EthSeer
+  #   link: https://ethseer.io/?network=mainnet
+  - title: ethPandaOps Twitter (Post-Update Testing Results)
+    link: https://x.com/ethpandaops/
+
+
+meta_eip: 7607
+eips: # separating by sections is optional
+  # - number: 
+  #   description: 
+  # - section: 
+  #   section_items:
+  #     - number: 
+  #       description: 
+  - section: Scale Blobs
+    section_items:
+      - number: 7594
+        description: PeerDAS
+      - number: 7892
+        description: Blob parameter only hardforks
+      - number: 7918
+        description: Blob base fee bounded by execution cost
+  - section: Scale L1
+    section_items:
+      - number: 7883
+        description: ModExp gas cost increase
+      - number: 7823
+        description: Set upper bounds for MODEXP
+      - number: 7825
+        description: Transaction gas limit cap
+      - number: 7642
+        description: Drop pre-merge fields
+      - number: 7935
+        description: Set default gas limit to 60M
+  - section: Improve UX
+    section_items:
+      - number: 7951
+        description: Precompile for secp256r1 Curve Support
+      - number: 7939
+        description: Count leading zeros (CLZ) opcode
+      - number: 7934
+        description: RLP execution block size limit
+      - number: 7917
+        description: Deterministic proposer lookahead
+  - section: Other
+    section_items:
+      - number: 7910
+        description: eth_config JSON-RPC method
+
+
+
+
+# poap section is hidden until 60min before activation
+poap: false # true = show poap section, false = hide
+# poap_address: poap.ethstaker.eth
+# poap_deadline: May 10, 11:59 PM EST
+# poap_payment_networks:
+#   - Arbitrum
+#   - Base
+#   - Optimism
+#   - Ethereum Mainnet
+# poap_minted_network: Arbitrum One
+# poap_options:
+#   - cost: 0.005 ETH for 2 POAPs
+#     airship_link: https://airship.poap.xyz/pectra-mainnet-upgrade # optional
+#     poaps:
+#       - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet.webp
+#         link: https://poap.gallery/drops/189671
+#         title: Official Pectra Upgrade POAP
+#       - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet-community.gif
+#         link: https://poap.gallery/drops/189670
+#         title: Pectra Upgrade POAP, Community Edition
+#   - cost: 0.05 ETH for 3 POAPs
+#     airship_link: https://airship.poap.xyz/pectra-mainnet-supporter-edition # optional
+#     poaps:
+#       - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet.webp
+#         link: https://poap.gallery/drops/189671
+#         title: Official Pectra Upgrade POAP
+#       - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet-community.gif
+#         link: https://poap.gallery/drops/189670
+#         title: Pectra Upgrade POAP, Community Edition
+#       - img: /assets/img/poaps/pectra-mainnet/pectra-mainnet-premium.gif
+#         link: https://poap.gallery/drops/189672
+#         title: Official Pectra Upgrade POAP, Protocol Supporter Edition
+# poap_sponsor: true # true = show sponsor section, false = hide
+# poap_sponsor_text: POAP mint powered by Arbitrum One
+# poap_sponsor_img: /assets/img/sponsors/arbitrum.png
+# poap_sponsor_link: https://arbitrum.io/
+
+
+
