@@ -1,32 +1,3 @@
----
----
-
-/*
-
-
-
-
-
-THIS FILE IS NO LONGER USED
-
-NOW USING _includes/style.css
-
-
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
 {%- assign upgrade_data_file = include.upgrade_data_file -%}
 {%- assign data = site.data[upgrade_data_file] -%}
 
@@ -84,7 +55,7 @@ nav {
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 30px;
-  gap: 18px;
+  gap: 10px 18px;
   padding-bottom: 25px;
 }
 nav a {
@@ -97,6 +68,7 @@ nav a {
   white-space: nowrap;
   transition: all 0.2s ease;
   text-decoration: none !important;
+  /*border: 1px solid var(--accent-border);*/
 }
 nav a:hover {
   background: var(--accent-bg-hover);
@@ -105,6 +77,7 @@ nav a:hover {
 header {
   text-align: center;
   margin-bottom: 20px;
+      padding-top: 1px;
 }
 footer {
   text-align: center;
@@ -137,6 +110,65 @@ a:hover {
   /*text-decoration: underline;*/
   text-decoration: none;
 }
+
+
+
+select {
+  color: var(--accent-text);
+  background: var(--accent-bg);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border-color: var(--accent-border);
+  font-size: 95%;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#selectWrapper {
+  /*position: relative;*/
+  display: inline-block;
+
+  position: absolute;
+  right: 10px;
+  top: -45px;
+}
+#selectWrapper::after {
+  /*content: "\2303";*/
+  content: "▼";
+  /*content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");*/
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  /*transform: translateY(-50%);*/
+  /*transform: translate(0, -40%);*/
+  transform: skew(0deg, 0deg) rotateX(60deg) rotateY(0deg) translate(0, -100%);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  font-weight: bold;
+  color: var(--accent-text);
+}
+#selectWrapper svg {
+  fill: pink;
+}
+@media screen and (max-width: 1200px) {
+  #selectWrapper {
+    right: 50%;
+    translate: 50%;
+  }
+  select {
+    padding: 6px 12px;
+    font-size: 90%;
+    border-radius: 6px;
+  }
+}
+
 
 
 .background {
@@ -188,7 +220,7 @@ a:hover {
   color: var(--accent-text);
   display: inline-block;
   margin-bottom: 15px;
-  width: 245px;
+  width: 260px;
   max-width: 85% !important;
 }
 #timer.activated {
@@ -355,41 +387,6 @@ a:hover {
 }
 
 
-
-select {
-  color: var(--accent-text);
-  background: var(--accent-bg);
-  padding: 10px 16px;
-  border-radius: 8px;
-  border-color: var(--accent-border);
-  font-size: 1rem;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-  text-decoration: none !important;
-}
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.select-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.select-wrapper::after {
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  filter: brightness(0.5);
-}
 
 
 .github {

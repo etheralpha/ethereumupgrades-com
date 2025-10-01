@@ -3,10 +3,19 @@ upgrade_network: Mainnet
 activation_unix_epoch: 1746612311
 # activation_unix_epoch: 0 # for testing to show poap section
 activation_epoch: 364,032
-activation_slot: 11,649,024
 
 
 background_img: /assets/img/backgrounds/pectra.png #optional, shows as timer card bg
+css: |
+  --bg: rgba(255, 254, 246, 100);
+  --img-transparency: 93%;
+  --card: #ffffff;
+  --text: #966103;
+  --accent-text: #b8810c;
+  --accent-bg: #f8f0d3;
+  --accent-border: #b8810c;
+  --accent-text-hover: #dcae0e;
+  --accent-bg-hover: #f6e8b4;
 
 
 livestream_start: 50 minutes prior to activation

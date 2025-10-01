@@ -12,7 +12,8 @@ This is the source code for <https://ethereumupgrades.com>, an info site for Eth
 1. Start the local server: `bundle exec jekyll serve`
 1. Go to <http://localhost:4400/> to view changes
 
-To build the site use `bundle exec jekyll build`.
+
+To build the site use `python3 generate_pages.py && bundle exec jekyll build`.
 
 Resources:
 
