@@ -19,8 +19,8 @@ css: |
 
 
 # optional
-# livestream_start: 50 minutes prior to activation
-# livestream_link: 
+livestream_start: 30 minutes prior to activation
+livestream_link: https://www.youtube.com/embed/cJLobeQqO9E
 
 
 upgrade_announcement: https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement #optional
