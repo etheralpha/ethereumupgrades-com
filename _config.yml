@@ -15,10 +15,3 @@ plugins:
 redirect_from: # jekyll-redirect-from
   json: false
 
-
-# Upgrade Info
-upgrade_name: Fusaka
-upgrade_network: Holesky
-upgrade_data_file: fusaka-holesky
-
-
