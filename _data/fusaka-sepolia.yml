@@ -40,8 +40,8 @@ resources: # separating by sections is optional
     link: https://lab.ethpandaops.io/beacon/locally-built-blocks
   - title: Beaconcha.in
     link: https://light-sepolia.beaconcha.in/
-  - title: EthSeer
-    link: https://ethseer.io/?network=sepolia
+  # - title: MigaLabs
+  #   link: https://www.migalabs.io/epochs?network=sepolia
   - title: ethPandaOps Twitter (Post-Update Testing Results)
     link: https://x.com/ethpandaops/
 
