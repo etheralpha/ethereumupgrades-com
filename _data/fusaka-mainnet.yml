@@ -1,8 +1,8 @@
 upgrade_name: Fusaka
 upgrade_network: Mainnet
-activation_unix_epoch: TBD
+activation_unix_epoch: 1764798551
 # activation_unix_epoch: 0 # for testing to show poap section
-activation_epoch: TBD # from meta eip
+activation_epoch: 411392 # from meta eip
 
 
 background_img: /assets/img/backgrounds/fusaka.png # optional, shows as timer card bg
@@ -19,8 +19,8 @@ css: |
 
 
 # optional
-# livestream_start: 50 minutes prior to activation
-# livestream_link: 
+livestream_start: 30 minutes prior to activation
+livestream_link: https://www.youtube.com/watch?v=upns65rH7mQ
 
 
 upgrade_announcement: https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement #optional
