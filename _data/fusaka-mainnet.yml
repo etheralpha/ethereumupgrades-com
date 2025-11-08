@@ -23,7 +23,7 @@ livestream_start: 30 minutes prior to activation
 livestream_link: https://www.youtube.com/embed/upns65rH7mQ
 
 
-upgrade_announcement: https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement #optional
+upgrade_announcement: https://blog.ethereum.org/2025/11/06/fusaka-mainnet-announcement #optional
 # ethpandaops_checklist: https://ethpandaops.io/posts/fusaka-mainnet-checklist/ #optional
 resources: # separating by sections is optional
   # - title: 
