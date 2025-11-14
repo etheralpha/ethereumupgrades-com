@@ -38,6 +38,12 @@
 </header>
 
 
+{%- if data.intro -%}
+  <section id="intro" class="card">
+    {{data.intro}}
+  </section>
+{%- endif -%}
+
 
 {%- if tbd == "tbd" -%}
   <section id="countdown" class="card background">

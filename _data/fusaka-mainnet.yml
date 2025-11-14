@@ -1,5 +1,6 @@
 upgrade_name: Fusaka
 upgrade_network: Mainnet
+intro: Fusaka is the latest upgrade for Ethereum mainnet. It introduces improvements to scalability, data efficiency, and user experience while maintaining a commitment to security. # optional
 activation_unix_epoch: 1764798551
 # activation_unix_epoch: 0 # for testing to show poap section
 activation_epoch: 411392 # from meta eip
