@@ -34,11 +34,7 @@ resources: # separating by sections is optional
   #     - title: 
   #       link: 
   - title: The Lab (Live Slots)
-    link: https://lab.ethpandaops.io/beacon/slot/live
-  - title: The Lab (Live Blocks)
-    link: https://lab.ethpandaops.io/beacon/block-production/live
-  - title: The Lab (Locally Built Blocks)
-    link: https://lab.ethpandaops.io/beacon/locally-built-blocks
+    link: https://lab.ethpandaops.io/ethereum/slots
   - title: Beaconcha.in
     link: https://beaconcha.in/
   # - title: MigaLabs
