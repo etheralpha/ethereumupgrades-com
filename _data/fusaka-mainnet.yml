@@ -92,7 +92,7 @@ eips: # separating by sections is optional
 # poap section is hidden until 60min before activation
 poap: true # true = show poap section, false = hide
 poap_address: poap.ethstaker.eth
-poap_deadline: May 7, 11:59 PM EST
+poap_deadline: December 7, 11:59 PM EST
 poap_payment_networks:
   - Arbitrum
   - Base
